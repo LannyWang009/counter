@@ -21,7 +21,7 @@ app.post('/POST/increment', function (req, res, nextFn) {
   console.log('I am sending a post request to /post/increment')
   console.log(counter)
   increment()
-  console.log(counter)
+  res.json(counter)
 })
 
 app.post('/POST/decrement', function (req, res, nextFn) {
@@ -29,6 +29,7 @@ app.post('/POST/decrement', function (req, res, nextFn) {
   console.log(counter)
   decrement()
   console.log(counter)
+  res.json(counter)
 })
 
 app.get('/GET/value', function (req, res, nextFn) {
